@@ -1,0 +1,97 @@
+@charset "ISO-8859-1";
+
+body {
+    background: linear-gradient(135deg, rgb(255, 128, 255), #ff8e53, rgb(0, 255, 255), #ff8e53, #ff6f61);
+    background-size: 400% 400%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width: 80%;
+    max-width: 1000px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: #ff8e53;
+    color: #fff;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+tbody td {
+    padding: 12px;
+    text-align: left;
+    color: black;
+    font-size: 1em;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+tbody td:first-child {
+    text-align: center;
+}
+
+table th, table td {
+    border-bottom: 1px solid #ddd;
+}
+
+table th:last-child, table td:last-child {
+    border-right: none;
+}
+
+table td {
+    font-size: 0.9em;
+}

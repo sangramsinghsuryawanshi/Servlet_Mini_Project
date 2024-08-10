@@ -1,0 +1,107 @@
+body {
+    background: linear-gradient(135deg, rgb(255, 128, 255), #ff8e53, rgb(0, 255, 255), #ff8e53, #ff6f61);
+    background-size: 400% 400%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    backdrop-filter: blur(10px);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border: 2px solid #ff8e53;
+}
+
+button {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ff8e53, #ff6f61);
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: opacity 0.4s;
+    opacity: 0;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+button:hover::before {
+    opacity: 1;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #fff, #e5e5e5);
+    color: #ff6f61;
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
